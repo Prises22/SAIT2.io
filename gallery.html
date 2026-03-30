@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 3px solid #e94560;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 span {
+            color: #e94560;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #e94560;
+            border-radius: 25px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: #ff6b8a;
+            transform: scale(1.05);
+        }
+
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1rem;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-item p {
+            color: #e94560;
+            font-weight: bold;
+        }
+
+    
+        .selected-area {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .selected-area h3 {
+            margin-bottom: 1rem;
+            color: #e94560;
+        }
+
+        #selectedImage {
+            max-width: 300px;
+            border-radius: 15px;
+            margin-top: 0.5rem;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="html.html">Главная</a>
+            <a href="gallery.html">Галерея</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>📸 Выбери  картинку</h2>
+
+        <div class="gallery">
+        
+
+            
+            <div class="gallery-item" onclick="selectImage('леви.jpg', 'Леви Акerman')">
+                <img src="леви.jpg"
+                     alt="Леви"
+                    onclick="alert('Ну в принцепе норм ')" 
+                   
+                      
+                <p>⚔️ Леви (Атака Титанов)</p>
+            </div>
+
+            <!-- Картинка 3 -->
+            <div class="gallery-item" onclick="selectImage('танзиро.jpg', 'Танджиро и Незко')">
+                <img src="танзиро.jpg"
+                     alt="Демон Слейер" onclick="alert('пойдет ')" 
+                
+                <p>🗡️ Танджиро и Незко</p>
+            </div>
+
+            
+            <div class="gallery-item" onclick="selectImage('гоку.jpg', 'Гоку Super Saiyan')">
+                <img src="гоку.jpg"
+                     alt="Драгонболл" onclick="alert('Слишком долгое')" 
+                     onerror="this.src='https://via.placeholder.com/250x200?text=Гоку'">
+                <p>🐉 Гоку (Драгонболл)</p>
+            </div>
+
+            
+            <div class="gallery-item" onclick="selectImage('эрен.jpg', 'Эрен Йегер')">
+                <img src="эрен.jpg"
+                     alt="Эрен"
+                      onclick="alert('НУ не плохо')" 
+              
+                <p>🔥 Эрен (Атака Титанов)</p>
+            </div>
+
+            <!-- Картинка 6 -->
+            <div class="gallery-item" onclick="selectImage('годжо.jpg', 'Годжо Сатору')">
+                <img src="годжо.jpg"
+                     alt="Магическая битва"
+                      onclick="alert('С кайфом')" 
+                    
+                <p>👁️Годжо </p>
+
+</body>
+</html>
